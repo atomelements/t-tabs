@@ -1,0 +1,48 @@
+{
+    "name": "Image",
+    "properties": [{
+        "name": "Data",
+        "fields": {
+            "tabs": {
+                "name": "Tabs",
+                "type": "list",
+                "parameter": "label",
+                "value": []
+            }
+        }
+    }, {
+        "name": "Properties",
+        "fields": {
+            "scrollable": {
+                "name": "Fading Effect",
+                "type": "Boolean",
+                "value": true
+            },
+            "noink": {
+                "name": "Remove Ink Effect",
+                "type": "Boolean",
+                "value": true
+            },
+            "hideScrollButtons": {
+                "name": "Hide Scroll Buttons",
+                "type": "Boolean",
+                "value": true
+            },
+            "noBar": {
+                "name": "Remove Bar",
+                "type": "Boolean",
+                "value": true
+            },
+            "noSlide": {
+                "name": "Disable Sliding on tabs",
+                "type": "Boolean",
+                "value": true
+            },
+            "disableDrag": {
+                "name": "Disable dragging on tabs",
+                "type": "Boolean",
+                "value": true
+            }
+        }
+    }]
+}

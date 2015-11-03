@@ -25,43 +25,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <link rel="import" href="../t-tabs.html">
     <link rel="import" href="../t-tab.html">
-    <style is="custom-style">
-       t-tabs .tab-header {
-        --paper-toolbar-background: #00bcd4;
-      }
-
-      body {
-        font-family: sans-serif;
-        margin: 0;
-        padding: 24px;
-        color: #333;
-      }
-
-      t-tabs, paper-toolbar {
-        background-color: #00bcd4;
-        color: #fff;
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-      }
-
-      paper-toolbar t-tabs {
-        box-shadow: none;
-      }
-
-      t-tabs[noink][no-bar] t-tab.iron-selected {
-        color: #ffff8d;
-      }
-
-      t-tabs[alignBottom] {
-        box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.15);
-      }
-
-      h3 {
-        font-size: 16px;
-        font-weight: 400;
-        padding-top: 20px;
-      }
-
-    </style>
+    
 
   </head>
   <body>
@@ -74,103 +38,101 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <t-tab label="ITEM THREE">Item three content</t-tab>
 </t-tabs>
 
-<!-- 
-    <h3>B. The bottom bar appears to indicate the selected tab, but without sliding effect.</h3>
+<h3>B. The bottom bar appears to indicate the selected tab, but without sliding effect.</h3>
 
-    <paper-tabs selected="0" noink no-slide>
+    <t-tabs selected="0" noink no-slide>
 
-      <paper-tab>ITEM ONE</paper-tab>
-      <paper-tab>ITEM TWO</paper-tab>
-      <paper-tab>ITEM THREE</paper-tab>
+      <t-tab label="ITEM ONE"></t-tab>
+      <t-tab label="ITEM TWO"></t-tab>
+      <t-tab label="ITEM THREE"></t-tab>
 
-    </paper-tabs>
+    </t-tabs>
 
     <h3>C. The bar slides to the selected tab</h3>
 
-    <paper-tabs selected="0" noink>
+    <t-tabs selected="0" noink>
 
-      <paper-tab>ITEM ONE</paper-tab>
-      <paper-tab>ITEM TWO</paper-tab>
-      <paper-tab>ITEM THREE</paper-tab>
+      <t-tab label="ITEM ONE"></t-tab>
+      <t-tab label="ITEM TWO"></t-tab>
+      <t-tab label="ITEM THREE"></t-tab>
 
-    </paper-tabs>
+    </t-tabs>
 
     <h3>D. Inky Tabs</h3>
 
-    <paper-tabs selected="0">
+    <t-tabs selected="0" inverted>
 
-      <paper-tab>ITEM ONE</paper-tab>
-      <paper-tab>ITEM TWO</paper-tab>
-      <paper-tab>ITEM THREE</paper-tab>
+      <t-tab label="ITEM ONE"></t-tab>
+      <t-tab label="ITEM TWO"></t-tab>
+      <t-tab label="ITEM THREE"></t-tab>
 
-    </paper-tabs>
+    </t-tabs>
 
     <h3>E. Scrollable Tabs</h3>
 
-    <paper-tabs id="scrollableTabs" selected="0" scrollable>
+    <t-tabs id="scrollableTabs" selected="0" scrollable>
 
-      <paper-tab>NUMBER ONE ITEM</paper-tab>
-      <paper-tab>ITEM TWO</paper-tab>
-      <paper-tab>THE THIRD ITEM</paper-tab>
-      <paper-tab>THE ITEM FOUR</paper-tab>
-      <paper-tab>FIFTH</paper-tab>
-      <paper-tab>THE SIXTH TAB</paper-tab>
-      <paper-tab>NUMBER SEVEN</paper-tab>
-      <paper-tab>EIGHT</paper-tab>
-      <paper-tab>NUMBER NINE</paper-tab>
-      <paper-tab>THE TENTH</paper-tab>
-      <paper-tab>THE ITEM ELEVEN</paper-tab>
-      <paper-tab>TWELFTH ITEM</paper-tab>
+      <t-tab label="NUMBER ONE ITEM"></t-tab>
+      <t-tab label="ITEM TWO"></t-tab>
+      <t-tab label="THE THIRD ITEM"></t-tab>
+      <t-tab label="THE ITEM FOUR"></t-tab>
+      <t-tab label="FIFTH"></t-tab>
+      <t-tab label="THE SIXTH TAB"></t-tab>
+      <t-tab label="NUMBER SEVEN"></t-tab>
+      <t-tab label="EIGHT"></t-tab>
+      <t-tab label="NUMBER NINE"></t-tab>
+      <t-tab label="THE TENTH"></t-tab>
+      <t-tab label="THE ITEM ELEVEN"></t-tab>
+      <t-tab label="TWELFTH ITEM"></t-tab>
 
-    </paper-tabs>
+    </t-tabs>
 
     <h3>F. Link Tabs</h3>
 
-    <paper-tabs selected="0">
+    <t-tabs selected="0">
 
-      <paper-tab link><a href="#item1" class="horizontal center-center layout">ITEM ONE</a></paper-tab>
-      <paper-tab link><a href="#item2" class="horizontal center-center layout">ITEM TWO</a></paper-tab>
-      <paper-tab link><a href="#item3" class="horizontal center-center layout">ITEM THREE</a></paper-tab>
+      <t-tab label="something" link><a href="#item1" class="horizontal center-center layout">ITEM ONE</a></t-tab>
+      <t-tab label="something" link><a href="#item2" class="horizontal center-center layout">ITEM TWO</a></t-tab>
+      <t-tab label="something" link><a href="#item3" class="horizontal center-center layout">ITEM THREE</a></t-tab>
 
-    </paper-tabs>
+    </t-tabs>
 
     <h3>G. Tabs in Toolbar</h3>
 
-    <paper-toolbar class="tall">
+    <t-toolbar class="tall">
 
-      <paper-tabs selected="0" class="bottom self-end" style="width: 300px;">
+      <t-tabs selected="0" class="bottom self-end" style="width: 300px;">
 
-        <paper-tab>ITEM ONE</paper-tab>
-        <paper-tab>ITEM TWO</paper-tab>
+        <t-tab label="ITEM ONE"></t-tab>
+        <t-tab label="ITEM TWO"></t-tab>
 
-      </paper-tabs>
+      </t-tabs>
 
       <div class="bottom flex"></div>
 
-    </paper-toolbar>
+    </t-toolbar>
 
     <h3>H. Tabs aligned to bottom</h3>
 
-    <paper-tabs selected="0" alignBottom>
+    <t-tabs selected="0" align-bottom inverted>
 
-      <paper-tab>ITEM ONE</paper-tab>
-      <paper-tab>ITEM TWO</paper-tab>
-      <paper-tab>ITEM THREE</paper-tab>
+      <t-tab label="ITEM ONE">ssssssssssssssssssssssssssssssssssssss</t-tab>
+      <t-tab label="ITEM TWO">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</t-tab>
+      <t-tab label="ITEM THREE">33333333333333333333333333</t-tab>
 
-    </paper-tabs>
+    </t-tabs>
 
     <h3>I. Bound Selection</h3>
 
     <template is="dom-bind">
       <h2>Current Tab: <span>[[selected]]</span></h2>
-      <paper-tabs selected="{{selected}}">
+      <t-tabs selected="{{selected}}">
 
-        <paper-tab>ITEM ONE</paper-tab>
-        <paper-tab>ITEM TWO</paper-tab>
-        <paper-tab>ITEM THREE</paper-tab>
+        <t-tab label="ITEM ONE"></t-tab>
+        <t-tab label="ITEM TWO"></t-tab>
+        <t-tab label="ITEM THREE"></t-tab>
 
-      </paper-tabs>
+      </t-tabs>
     </template>
- -->
   </body>
 </html>

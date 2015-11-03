@@ -40,6 +40,8 @@ Custom property | Description | Default
 
 <dom-module id="t-tab">
 
+  <template>
+
   <style>
 
     :host {
@@ -50,10 +52,14 @@ Custom property | Description | Default
 
       position: relative;
       padding: 0 12px;
-      overflow: hidden;
       cursor: pointer;
       height:100%;
       @apply(--paper-tab);
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      
     }
 
     :host(:focus) {
@@ -73,19 +79,16 @@ Custom property | Description | Default
       @apply(--paper-tab-content);
     }
 
-    :host(:not(.iron-selected)) > .tab-content {
+    :host.iron-selected .tab-content{
+      opacity: 1;
+    }
+    
+
+    :host .tab-content{
       opacity: 0.8;
     }
 
-    :host(:focus) .tab-content {
-      opacity: 1;
-      font-weight: 700;
-    }
 
-    #ink {
-      color: var(--paper-tab-ink, --paper-yellow-a100);
-      pointer-events: none;
-    }
 
     .tab-content {
       height: 100%;
@@ -99,12 +102,7 @@ Custom property | Description | Default
 
   </style>
 
-  <template>
-
     <div class="tab-content flex-auto center-center horizontal layout">{{label}}</div>
-    <template is="dom-if" if="[[!noink]]">
-      <paper-ripple id="ink" initial-opacity="0.95" opacity-decay-velocity="0.98"></paper-ripple>
-    </template>
 
   </template>
 
@@ -122,17 +120,6 @@ Custom property | Description | Default
 
     properties: {
 
-      /**
-       * If true, ink ripple effect is disabled.
-       *
-       * @attribute noink
-       */
-      noink: {
-        type: Boolean,
-        value: false,
-        reflectToAttribute:true
-      },
-
       label:{
         type:String,
         value:"",
@@ -143,20 +130,8 @@ Custom property | Description | Default
 
     hostAttributes: {
       role: 'tab'
-    },
-
-    listeners: {
-      down: '_onDown'
-    },
-
-    get _parentNoink () {
-      var parent = Polymer.dom(this).parentNode;
-      return !!parent && !!(parent.hasAttribute('data-noink'));
-    },
-
-    _onDown: function(e) {
-      this.noink = !!this.noink || !!this._parentNoink;
     }
+
   });
 
 </script>

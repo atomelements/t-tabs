@@ -1,5 +1,5 @@
 {
-    "name": "Image",
+    "name": "Tabs",
     "properties": [{
         "name": "Data",
         "fields": {
@@ -13,35 +13,21 @@
     }, {
         "name": "Properties",
         "fields": {
-            "scrollable": {
-                "name": "Fading Effect",
+            "inverted": {
+                "name": "Colored background",
                 "type": "Boolean",
-                "value": true
+                "value": false
             },
-            "noink": {
-                "name": "Remove Ink Effect",
+            "alignBottom": {
+                "name": "Bottom align tabs",
                 "type": "Boolean",
-                "value": true
+                "value": false
             },
-            "hideScrollButtons": {
-                "name": "Hide Scroll Buttons",
-                "type": "Boolean",
-                "value": true
-            },
-            "noBar": {
-                "name": "Remove Bar",
-                "type": "Boolean",
-                "value": true
-            },
-            "noSlide": {
-                "name": "Disable Sliding on tabs",
-                "type": "Boolean",
-                "value": true
-            },
-            "disableDrag": {
-                "name": "Disable dragging on tabs",
-                "type": "Boolean",
-                "value": true
+            "alignment": {
+                "name": "Alignment",
+                "type": "options",
+                "values": ["left","center","fullbleed"],
+                "value":"left"
             }
         }
     }]

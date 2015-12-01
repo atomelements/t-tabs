@@ -1,138 +1,24 @@
 <!doctype html>
-<!--
-@license
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE
-The complete set of authors may be found at http://polymer.github.io/AUTHORS
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS
--->
 
 <html>
-  <head>
+<head>
 
-    <title>t-tabs</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+  <title>t-tabs demo</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="../../iron-flex-layout/classes/iron-flex-layout.html">
-
-  
-
-    <link rel="import" href="../t-tabs.html">
-    <link rel="import" href="../t-tab.html">
-    
-
-  </head>
-  <body>
-
-    <h3>A. No ink effect and no sliding bar</h3>
-
-<t-tabs selected="0" noink >
-    <t-tab label="ITEM ONE">Item one content</t-tab>
-    <t-tab label="ITEM TWO">Item two content</t-tab>
-    <t-tab label="ITEM THREE">Item three content</t-tab>
-</t-tabs>
-
-<h3>B. The bottom bar appears to indicate the selected tab, but without sliding effect.</h3>
-
-    <t-tabs selected="0" noink no-slide>
-
-      <t-tab label="ITEM ONE"></t-tab>
-      <t-tab label="ITEM TWO"></t-tab>
-      <t-tab label="ITEM THREE"></t-tab>
-
-    </t-tabs>
-
-    <h3>C. The bar slides to the selected tab</h3>
-
-    <t-tabs selected="0" noink>
-
-      <t-tab label="ITEM ONE"></t-tab>
-      <t-tab label="ITEM TWO"></t-tab>
-      <t-tab label="ITEM THREE"></t-tab>
-
-    </t-tabs>
-
-    <h3>D. Inky Tabs</h3>
-
-    <t-tabs selected="0" inverted>
-
-      <t-tab label="ITEM ONE"></t-tab>
-      <t-tab label="ITEM TWO"></t-tab>
-      <t-tab label="ITEM THREE"></t-tab>
-
-    </t-tabs>
-
-    <h3>E. Scrollable Tabs</h3>
-
-    <t-tabs id="scrollableTabs" selected="0" scrollable>
-
-      <t-tab label="NUMBER ONE ITEM"></t-tab>
-      <t-tab label="ITEM TWO"></t-tab>
-      <t-tab label="THE THIRD ITEM"></t-tab>
-      <t-tab label="THE ITEM FOUR"></t-tab>
-      <t-tab label="FIFTH"></t-tab>
-      <t-tab label="THE SIXTH TAB"></t-tab>
-      <t-tab label="NUMBER SEVEN"></t-tab>
-      <t-tab label="EIGHT"></t-tab>
-      <t-tab label="NUMBER NINE"></t-tab>
-      <t-tab label="THE TENTH"></t-tab>
-      <t-tab label="THE ITEM ELEVEN"></t-tab>
-      <t-tab label="TWELFTH ITEM"></t-tab>
-
-    </t-tabs>
-
-    <h3>F. Link Tabs</h3>
-
-    <t-tabs selected="0">
-
-      <t-tab label="something" link><a href="#item1" class="horizontal center-center layout">ITEM ONE</a></t-tab>
-      <t-tab label="something" link><a href="#item2" class="horizontal center-center layout">ITEM TWO</a></t-tab>
-      <t-tab label="something" link><a href="#item3" class="horizontal center-center layout">ITEM THREE</a></t-tab>
-
-    </t-tabs>
-
-    <h3>G. Tabs in Toolbar</h3>
-
-    <t-toolbar class="tall">
-
-      <t-tabs selected="0" class="bottom self-end" style="width: 300px;">
-
-        <t-tab label="ITEM ONE"></t-tab>
-        <t-tab label="ITEM TWO"></t-tab>
-
-      </t-tabs>
-
-      <div class="bottom flex"></div>
-
-    </t-toolbar>
-
-    <h3>H. Tabs aligned to bottom</h3>
-
-    <t-tabs selected="0" align-bottom inverted>
-
-      <t-tab label="ITEM ONE">ssssssssssssssssssssssssssssssssssssss</t-tab>
-      <t-tab label="ITEM TWO">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</t-tab>
-      <t-tab label="ITEM THREE">33333333333333333333333333</t-tab>
-
-    </t-tabs>
-
-    <h3>I. Bound Selection</h3>
-
-    <template is="dom-bind">
-      <h2>Current Tab: <span>[[selected]]</span></h2>
-      <t-tabs selected="{{selected}}">
-
-        <t-tab label="ITEM ONE"></t-tab>
-        <t-tab label="ITEM TWO"></t-tab>
-        <t-tab label="ITEM THREE"></t-tab>
-
-      </t-tabs>
-    </template>
-  </body>
+  <link rel="import" href="../t-tabs.html">
+  <link rel="import" href="../../t-shared-components/theme.html">
+</head>
+<body>
+  <t-tabs selected="0" noink="true" class="container-element">
+      <t-tab label="ITEM ONE">Item one content</t-tab>
+      <t-tab label="ITEM TWO">Item two content</t-tab>
+      <t-tab label="ITEM THREE">Item three content</t-tab>
+  </t-tabs>
+</body>
 </html>

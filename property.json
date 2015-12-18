@@ -6,8 +6,7 @@
             "tabs": {
                 "name": "Tabs",
                 "type": "list",
-                "parameter": "label",
-                "value": []
+                "value": ["First", "Second"]
             }
         }
     }, {

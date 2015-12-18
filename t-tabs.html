@@ -84,6 +84,10 @@ Custom property | Description | Default
 <dom-module id="t-tabs">
     <template>
     <style>
+    :host {
+        font-family: var(--primary-font-family, 'Open Sans');
+    }
+
     :host([inverted]) .tab-header{
         background: var(--default-primary-color, #07c5f2 );
         color: var(--primary-background-color, #ffffff);
@@ -483,7 +487,6 @@ Polymer({
                 });
             }
         }
-
     },
 
 });

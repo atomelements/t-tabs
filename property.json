@@ -26,7 +26,7 @@
                 "name": "Alignment",
                 "type": "options",
                 "values": ["left","center","fullbleed"],
-                "value":"left"
+                "index": 0
             }
         }
     }]
